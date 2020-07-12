@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:tianyue/app/app_scene.dart';
 
 void main() {
+  // main方法里面调用运行app方法
   runApp(AppScene());
 
   if (Platform.isAndroid) {
