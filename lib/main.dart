@@ -9,6 +9,7 @@ void main() {
   if (Platform.isAndroid) {
     // 系统UI覆盖样式
     SystemUiOverlayStyle style = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
+    // 系统浏览器设置系统UI覆盖样式
     SystemChrome.setSystemUIOverlayStyle(style);
   }
 }
