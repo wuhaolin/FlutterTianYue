@@ -28,11 +28,14 @@ class GuideSceneState extends State<GuideScene> {
 
   List<Widget> bannerList = [];
 
+  // 初始化状态
   @override
   void initState() {
     super.initState();
+    // 和java里面for循环稍微有些不同，首先需要算出长度
     for (int i = 0, length = imageList.length; i < length; i++) {
       if (i == length - 1) {
+        // 最后一页
         bannerList.add(Stack(
           children: <Widget>[
             Image.asset(
