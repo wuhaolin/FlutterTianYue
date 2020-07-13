@@ -79,22 +79,28 @@ class GuideSceneState extends State<GuideScene> {
           ],
         ));
       } else {
-        bannerList.add(new Stack(
+        // 如果一个界面属于层叠排版的话，需要使用Stack
+        Stack stack = Stack(
           children: <Widget>[
-            new Image.asset(
+            // asset资产，通过Image可以获取内存、资产、文件和网络里面的图片
+            Image.asset(
+              // 图片地址是必须要传的
               imageList[i],
-              fit: BoxFit.cover,
+              // 无穷大就是屏幕的宽度和高度
               width: double.infinity,
               height: double.infinity,
+              fit: BoxFit.cover,
             ),
-            new Center(
+            // 如果一个空间需要放在中间，那么首先想到使用Center
+            Center(
               child: new Text(
                 textList[i],
                 style: new TextStyle(fontSize: 20, color: Colors.white),
               ),
             )
           ],
-        ));
+        );
+        bannerList.add(stack);
       }
     }
   }
