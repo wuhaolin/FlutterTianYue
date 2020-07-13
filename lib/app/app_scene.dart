@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:tianyue/app/guide_scene.dart';
 import 'package:tianyue/public.dart';
 
+// app场景
 class AppScene extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'tianyue',
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
       theme: ThemeData(
         primaryColor: Colors.white,
         dividerColor: Color(0xffeeeeee),
