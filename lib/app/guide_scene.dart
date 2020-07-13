@@ -93,9 +93,10 @@ class GuideSceneState extends State<GuideScene> {
             ),
             // 如果一个空间需要放在中间，那么首先想到使用Center
             Center(
-              child: new Text(
+              child: Text(
                 textList[i],
-                style: new TextStyle(fontSize: 20, color: Colors.white),
+                // 文本需要使用文本样式
+                style: TextStyle(fontSize: 30, color: Colors.white),
               ),
             )
           ],
