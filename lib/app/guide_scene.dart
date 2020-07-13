@@ -40,18 +40,17 @@ class GuideSceneState extends State<GuideScene> {
           children: <Widget>[
             Image.asset(
               imageList[i],
-              fit: BoxFit.cover,
               width: double.infinity,
               height: double.infinity,
+              fit: BoxFit.cover,
             ),
             Center(
-              child: new Text(
+              child: Text(
                 textList[i],
-                style: new TextStyle(fontSize: 20, color: Colors.white),
+                style: new TextStyle(fontSize: 30, color: Colors.white),
               ),
             ),
             Align(
-              alignment: Alignment.bottomCenter,
               child: new Container(
                 margin: EdgeInsets.only(bottom: 50.0),
                 child: new GestureDetector(
@@ -75,6 +74,7 @@ class GuideSceneState extends State<GuideScene> {
                   ),
                 ),
               ),
+              alignment: Alignment.bottomCenter,
             ),
           ],
         ));
