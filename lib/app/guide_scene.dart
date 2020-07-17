@@ -54,7 +54,6 @@ class GuideSceneState extends State<GuideScene> {
             // 排整齐
             Align(
               child: Container(
-                margin: EdgeInsets.only(bottom: 50.0),
                 child: new GestureDetector(
                   onTap: () {
                     _goMain();
@@ -75,7 +74,10 @@ class GuideSceneState extends State<GuideScene> {
                       new Border.all(width: 1, color: Colors.white70)),
                   ),
                 ),
+                // 边缘
+                margin: EdgeInsets.only(bottom: 100.0),
               ),
+              // 对齐方式，是底部中间
               alignment: Alignment.bottomCenter,
             ),
           ],
@@ -110,7 +112,8 @@ class GuideSceneState extends State<GuideScene> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    // 脚手架
+     return Scaffold(
         body: Swiper(
             autoStart: false,
             circular: false,
