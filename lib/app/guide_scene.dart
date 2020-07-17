@@ -51,8 +51,9 @@ class GuideSceneState extends State<GuideScene> {
                 style: TextStyle(fontSize: 30, color: Colors.white),
               ),
             ),
+            // 排整齐
             Align(
-              child: new Container(
+              child: Container(
                 margin: EdgeInsets.only(bottom: 50.0),
                 child: new GestureDetector(
                   onTap: () {
