@@ -119,15 +119,18 @@ class GuideSceneState extends State<GuideScene> {
     // 脚手架
      return Scaffold(
         body: Swiper(
-            autoStart: false,
-            circular: false,
-            indicator: CircleSwiperIndicator(
+          children: bannerList,
+          indicator: CircleSwiperIndicator(
                 radius: 2,
                 spacing: 4,
                 padding: EdgeInsets.only(bottom: 32.0),
                 itemColor: Colors.white,
-                itemActiveColor: TYColor.primary),
-            children: bannerList));
+                itemActiveColor: TYColor.primary,
+          ),
+          autoStart: false,
+          circular: false,
+        )
+     );
   }
 
   void goMain() {
