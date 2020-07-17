@@ -62,10 +62,10 @@ class GuideSceneState extends State<GuideScene> {
                     width: 185,
                     height: 48,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                      color: Color(0X19FFFFFF),
-                      border:
-                      new Border.all(width: 1, color: Colors.white70)),
+                      border: Border.all(width: 2, color: Colors.white70),
+                      color: Colors.black,
+                      borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    ),
                     child: Text(
                       '立即启程',
                       style: TextStyle(color: Colors.white, fontSize: 20),
