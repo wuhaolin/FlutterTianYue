@@ -46,6 +46,7 @@ class GuideSceneState extends State<GuideScene> {
             ),
             Center(
               child: Text(
+                // Text里面必须赋值的是data
                 textList[i],
                 style: TextStyle(fontSize: 30, color: Colors.white),
               ),
