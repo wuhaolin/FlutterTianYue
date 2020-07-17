@@ -47,7 +47,7 @@ class GuideSceneState extends State<GuideScene> {
             Center(
               child: Text(
                 textList[i],
-                style: new TextStyle(fontSize: 30, color: Colors.white),
+                style: TextStyle(fontSize: 30, color: Colors.white),
               ),
             ),
             Align(
