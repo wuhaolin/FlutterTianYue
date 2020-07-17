@@ -26,6 +26,7 @@ class GuideSceneState extends State<GuideScene> {
     "因为在意，所以用心",
   ];
 
+  // 先构建一个List的Widget
   List<Widget> bannerList = [];
 
   // 初始化状态
@@ -54,30 +55,33 @@ class GuideSceneState extends State<GuideScene> {
             // 排整齐
             Align(
               child: Container(
-                child: new GestureDetector(
-                  onTap: () {
-                    _goMain();
-                  },
-                  child: new Container(
+                // 手势探测器
+                child: GestureDetector(
+                  // 为了实现效果，手势探测器里面还需要再使用一个Container
+                  child: Container(
                     width: 185,
-                    alignment: Alignment.center,
                     height: 48,
-                    child: new Text(
-                      '立即启程',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white, fontSize: 14),
-                    ),
-                    decoration: new BoxDecoration(
+                    decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(4.0)),
                       color: Color(0X19FFFFFF),
                       border:
                       new Border.all(width: 1, color: Colors.white70)),
+                    child: Text(
+                      '立即启程',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                    // 容器内部也有对应的功能
+                    alignment: Alignment.center,
                   ),
+                  // 为了有点击事件，只能再使用GestureDetector
+                  onTap: () {
+                    goMain();
+                  },
                 ),
-                // 边缘
+                // 为了有边距间隔，只能再使用Container
                 margin: EdgeInsets.only(bottom: 100.0),
               ),
-              // 对齐方式，是底部中间
+              // 为了有个底部对齐，只能先使用Align
               alignment: Alignment.bottomCenter,
             ),
           ],
@@ -126,7 +130,7 @@ class GuideSceneState extends State<GuideScene> {
             children: bannerList));
   }
 
-  void _goMain() {
+  void goMain() {
     Navigator.of(context).pushAndRemoveUntil(
         CupertinoPageRoute(builder: (BuildContext context) => RootScene()),
         (Route<dynamic> route) => false);
